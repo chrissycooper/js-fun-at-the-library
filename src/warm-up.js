@@ -12,7 +12,8 @@
 
 // var title = "Harry Potter";
 // var ...
-
+var title = "Bluets";
+var pages = 113;
 
 
 // Reassign (not initialize) your "pages" variable from above. An editor came around and
