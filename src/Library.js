@@ -17,22 +17,21 @@ function addBook (nameOfLib, bookToAdd){
 
 function checkoutBook(libObj, bookRequested, genreShelf){
   for  (var i = 0; i < 5; i++){
-  if (genreShelf === 'fiction' && libObj.shelves.fiction[i].title === bookRequested){
+    if (libObj.shelves.fantasy.length === 0){
+      return `Sorry, there are currently no copies of ${bookRequested} available at the ${libObj.name}`
+    }else if (genreShelf === 'fiction' && libObj.shelves.fiction[i].title === bookRequested){
       libObj.shelves.fiction.pop();
-      return `You have now checked out ${bookRequested} from the Denver Public Library`
+      return `You have now checked out ${bookRequested} from the ${libObj.name}`
     } else if (genreShelf === 'nonFiction' && libObj.shelves.nonFiction[i].title === bookRequested) {
       libObj.shelves.nonFiction.pop();
-      return `You have now checked out ${bookRequested} from the Denver Public Library`
+      return `You have now checked out ${bookRequested} from the ${libObj.name}`
+    } else if (genreShelf === 'fantasy' && libObj.shelves.fantasy[i].title === bookRequested) {
+      libObj.shelves.fantasy.pop();
+    } else {
+      return `Sorry, there are currently no copies of ${bookRequested} available at the ${libObj.name}`
     }
   }
 }
-
-// for  (var i = 0; i < nameOfLib.shelves.genreShelf.length; i++){
-//   if (genreShelf === 'fiction' && nameOfLib.shelves.fiction[i].title.includes(bookRequested)){
-//       return `You have now checked out ${bookRequested} from the ${nameOfLib}`
-//     }
-//   }
-// // }
 
 
 
