@@ -1,9 +1,11 @@
-function createLibrary(nameOfLib, shelf){
+function createLibrary(nameOfLib){
   return {
     name: nameOfLib,
     shelves: {fantasy: [], fiction: [], nonFiction: []}
   }
-}
+};
+
+
 
 module.exports = {
   createLibrary,
