@@ -15,16 +15,12 @@ function addBook (nameOfLib, bookToAdd){
   } 
 }
 
-// function addBook(nameOfLib, bookToAdd){
-//   nameOfLib.shelves[bookToAdd.genre].push(bookToAdd);
-// }
-
 function checkoutBook(libObj, bookRequested, genreShelf){
   for  (var i = 0; i < genreShelf.length; i++){
     if (libObj.shelves[genreShelf].length === 0){
       return `Sorry, there are currently no copies of ${bookRequested} available at the ${libObj.name}`
     } else if (libObj.shelves[genreShelf][i].title === bookRequested){
-      libObj.shelves[genreShelf].pop();
+      libObj.shelves[genreShelf].splice(i, 1);
       return `You have now checked out ${bookRequested} from the ${libObj.name}`
     }
   }
