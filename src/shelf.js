@@ -13,11 +13,21 @@ function unshelfBook(bookTitle, shelf){
   return shelf;
 };
 
-
+function listTitles(shelf){
+  var listOfTitles = ""
+  for (i = 0; i < shelf.length; i++){
+    if (i === 0){
+      listOfTitles = shelf[i].title;
+    } else {
+      listOfTitles = listOfTitles + ", " + shelf[i].title;
+    }
+  }
+  return listOfTitles;
+}
 
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
+  listTitles,
   // searchShelf
 };
