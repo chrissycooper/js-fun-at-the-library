@@ -12,10 +12,13 @@ class Librarian {
     return `Hello, ${patron}!`;
   }
   findBook(bookRequested){
-    if(book.title === bookRequested){
+    if(this.library.shelves.fantasy[0].title === bookRequested){
       return `Yes, we have ${bookRequested}`;
+    } else {
+      return `Sorry, we do not have ${bookRequested}`
     }
   }
 }
+
 
 module.exports = Librarian;
