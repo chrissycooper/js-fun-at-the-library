@@ -16,6 +16,7 @@ function addBook (nameOfLib, bookToAdd){
 };
 
 function checkoutBook(libObj, bookRequested, genreShelf){
+  
   for  (var i = 0; i < genreShelf.length; i++){
     if (!libObj.shelves[genreShelf][i]){
       return `Sorry, there are currently no copies of ${bookRequested} available at the ${libObj.name}`;
