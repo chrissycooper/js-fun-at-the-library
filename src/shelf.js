@@ -34,9 +34,6 @@ function searchShelf(shelf, lookingFor){
   return false;
   };
   
-    
- 
-
 module.exports = {
   shelfBook,
   unshelfBook,

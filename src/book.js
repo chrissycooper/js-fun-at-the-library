@@ -36,7 +36,6 @@ function editBook(book){
   book.pageCount *= 1/4;
 }
 
-
 module.exports = {
   createTitle,
   buildMainCharacter,

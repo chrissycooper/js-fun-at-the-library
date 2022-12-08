@@ -27,9 +27,6 @@ function checkoutBook(libObj, bookRequested, genreShelf){
   }
 };
 
-
-
-
 module.exports = {
   createLibrary,
   addBook,
