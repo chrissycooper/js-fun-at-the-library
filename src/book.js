@@ -33,7 +33,7 @@ function writeBook(bookTitle, bookCharacter, genre){
 }
 
 function editBook(book){
-  book.pageCount *= 1/4;
+  book.pageCount *= 3/4;
 }
 
 module.exports = {
